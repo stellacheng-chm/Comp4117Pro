@@ -23,42 +23,12 @@
             <div class="container">
                 <h1 class="display-4">基督教協基會社會服務部存貨系統</h1>
                 <p class="lead">此存貨系統可用於借還書籍/桌遊/活動物資/禮物(不用歸還)</p>
+                <p class="lead">此頁面尚未完成 以下圖片謹供參考</p>
             </div>
         </div>
 
-        <div class="row">
-            <% book.forEach(function(model) { %>
-            <div class="card col-xl-6 col-sm-12">
-                <div id="title">
-                    <a href="/"><%=model.name%> </a>
-                </div>
-                <p></p>
-                <div id="info">
-                    <img src=<%=model.photo %> id="photo" width="150" height="150">
-                    <ul class="list-group">
-                        <li class="list-group-item" id="info">
-                            <span id="briefinfo">書名:</span>
-                            <%= model.bookname %>
-                        </li>
-
-                        <li class="list-group-item" id="info">
-                            <span id="briefinfo">作者:</span>
-                            <%= model.author %>
-                        </li>
-
-                        <li class="list-group-item" id="info">
-                            <span id="briefinfo">出版社:</span>
-                            <%= model.publisher %>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <p></p>
-
-            </div>
-            <% }); %>
-
+        <div>
+            <img src="https://upload.cc/i1/2020/03/04/q1MhrB.png" img>
         </div>
     </div>
 </body>

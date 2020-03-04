@@ -26,13 +26,16 @@ module.exports.routes = {
   'POST /user/logout': 'UserController.logout',
 
   '    /item/userindex': 'ItemController.userindex',
+  '    /item/adminindex': 'ItemController.adminindex',
   '    /item/itemsearch': 'ItemController.itemsearch',
   '    /item/vitemsearch': 'ItemController.vitemsearch',
 
-  
-  
+  '    /item/usernoti': 'ItemController.usernoti',
+  '    /item/useraccount': 'ItemController.useraccount',
+
   //Book user
   '   /book/booksearch': 'BookController.booksearch',
+  '   /book/bookdetail': 'BookController.bookdetail',
   'GET /book/bookresult': 'BookController.bookresult',
   //Book vistor
   '    /book/vbooksearch': 'BookController.vbooksearch',

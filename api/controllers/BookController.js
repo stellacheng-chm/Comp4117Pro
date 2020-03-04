@@ -62,6 +62,10 @@ module.exports = {
         return res.view('book/vbookresult', {book:models});
 
     },
+
+    bookdetail:async function(req,res){
+        return res.view('book/bookdetail');
+    }
   
 
 };

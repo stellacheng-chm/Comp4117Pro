@@ -13,6 +13,12 @@ module.exports = {
         return res.view('item/userindex');
     },
 
+    adminindex: async function (req, res) {
+        
+
+        return res.view('item/adminindex');
+    },
+
     itemsearch: async function (req, res) {
         
 
@@ -24,6 +30,14 @@ module.exports = {
 
         return res.view('item/vitemsearch');
     },
+
+    usernoti:async function(req,res){
+        return res.view('item/usernoti');
+    },
+
+    useraccount:async function(req,res){
+        return res.view('item/useraccount');
+    }
   
 
 };

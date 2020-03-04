@@ -33,9 +33,15 @@ module.exports = {
 
             // return res.ok("Login successfully.");
 
-            
-             return res.redirect("/item/userindex");
-           
+
+            if (req.session.username == "admin") {
+                return res.redirect("/item/adminindex");
+            }else{
+                return res.redirect("/item/userindex");
+            }
+
+
+
 
             // else if (user.role == "admin") {
             //     return res.redirect("/item/homepage");
@@ -59,7 +65,7 @@ module.exports = {
 
         });
     },
-  
+
 
 };
 
