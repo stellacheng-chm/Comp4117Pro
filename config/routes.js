@@ -35,7 +35,7 @@ module.exports.routes = {
 
   //Book user
   '   /book/booksearch': 'BookController.booksearch',
-  '   /book/bookdetail': 'BookController.bookdetail',
+  '   /book/bookdetail/:id': 'BookController.bookdetail',
   'GET /book/bookresult': 'BookController.bookresult',
   //Book vistor
   '    /book/vbooksearch': 'BookController.vbooksearch',

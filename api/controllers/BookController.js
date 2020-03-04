@@ -63,9 +63,15 @@ module.exports = {
 
     },
 
-    bookdetail:async function(req,res){
-        return res.view('book/bookdetail');
-    }
+    bookdetail: async function (req, res) {
+
+        var model = await Book.findOne(req.params.id);
+
+        if (!model) return res.notFound();
+
+        return res.view('book/bookdetail', { book: model });
+
+    },
   
 
 };

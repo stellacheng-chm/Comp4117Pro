@@ -14,7 +14,7 @@
                     <a class="nav-item nav-link active" href="/item/useraccount">帳戶</a>
                 </div>
             </div>
-            
+
 
             <!-- <div><%=req.session.username%></div> -->
             <div>登入者: <%=req.session.username%> <a href="/user/logout">登出</a></div>
@@ -27,8 +27,42 @@
             </div>
         </div>
 
-        <div>
-            <img src="https://upload.cc/i1/2020/03/04/7I8r5u.png" img>
+        <div class="container">
+            <div class="row">
+                <div class="card col-xl-6">
+                    <img src=<%=book.photo %> width=width height=height>
+                </div>
+                <div class="card col-xl-6">
+                    <table class="table">
+                        <tr>
+                            <th id="detail" scope="row">位置: <%= book.location%></th>
+                        </tr>
+                        <tr>
+                            <th id="detail" scope="row">書名: <%= book.bookname %></th>
+                        </tr>
+                        <tr>
+                            <th id="detail" scope="row">類型: <%=book.category %></th>
+                        </tr>
+                        <tr>
+                            <th id="detail" scope="row">作者: <%= book.author %></th>
+                        </tr>
+                        <tr>
+                            <th id="detail" scope="row">出版社: <%=book.publisher %></th>
+                        </tr>
+                        <tr>
+                            <th id="detail" scope="row">出版年份: <%=book.year %></th>
+                        </tr>
+                        <tr>
+                            <th id="detail" scope="row">ISBN: <%=book.ISBN %></th>
+                        </tr>
+
+
+
+
+                    </table>
+
+                </div>
+            </div>
         </div>
     </div>
 </body>
