@@ -1,7 +1,7 @@
 <body onload="pageLoaded()">
     <div class="container">
         <nav role="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/">主頁</a>
+            <a class="navbar-brand" href="/item/userindex">主頁</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
                     <a class="nav-item nav-link active" href="/item/useraccount">帳戶</a>
                 </div>
             </div>
-            
+
 
             <!-- <div><%=req.session.username%></div> -->
             <div>登入者: <%=req.session.username%> <a href="/user/logout">登出</a></div>
@@ -23,12 +23,50 @@
             <div class="container">
                 <h1 class="display-4">基督教協基會社會服務部存貨系統</h1>
                 <p class="lead">此存貨系統可用於借還書籍/桌遊/活動物資/禮物(不用歸還)</p>
-                <p class="lead">此頁面尚未完成 以下圖片謹供參考</p>
+                <p class="lead">此頁面尚未完成 以下謹供參考</p>
             </div>
         </div>
 
-        <div>
-            <img src="https://upload.cc/i1/2020/03/04/q1MhrB.png" img>
+
+        <div class="row">
+
+            <div>
+                <img
+                    src="https://image.shutterstock.com/image-vector/facebook-profile-icon-gray-person-600w-465585245.jpg">
+            </div>
+            <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
+
+                <h2><strong>用戶資料</strong></h2>
+
+                <div style="position: relative;" class="form-group col-12 col-xl-12">
+                    <label style="position: relative;bottom: -5px;">用戶名稱:</label>
+                </div>
+
+
+                <div class="form-group col-12 col-xl-12"
+                    style="display: flex;justify-content: space-between;align-items: center;    padding-right: 0;">
+
+                    <label style="margin-right: 20px;">已借用的物品數量:</label>
+
+                </div>
+
+
+
+
+
+                <div>
+                    <button type="submit" class="btn btn-primary">更改資料</button>
+
+                    <button type="submit" class="btn btn-primary">更改密碼</button>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
         </div>
-    </div>
 </body>
