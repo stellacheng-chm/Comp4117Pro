@@ -57,7 +57,7 @@ module.exports.routes = {
   'GET /material/mamterialresult': 'MaterialController.materialresult',
 
   //VistorBookpage
-  '    /book/vbooksearch': 'BookController.vbooksearch',
+  '    /book/vistorbooksearch': 'BookController.vistorbooksearch',
   'GET /book/vbookresult': 'BookController.vbookresult',
 
   //VistorGamepage

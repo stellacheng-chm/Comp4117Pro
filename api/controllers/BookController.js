@@ -35,9 +35,9 @@ module.exports = {
 
     },
 
-    vbooksearch: async function (req, res) {
+    vistorbooksearch: async function (req, res) {
         var models = await Book.find().sort([{id:'DESC'}])
-        return res.view('book/vbooksearch', { book: models});
+        return res.view('book/vistorbooksearch', { book: models});
     },
 
     vbookresult: async function(req, res){
