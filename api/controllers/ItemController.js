@@ -19,10 +19,10 @@ module.exports = {
         return res.view('item/adminindex');
     },
 
-    itemsearch: async function (req, res) {
+    usersearch: async function (req, res) {
         
 
-        return res.view('item/itemsearch');
+        return res.view('item/usersearch');
     },
 
     vitemsearch: async function (req, res) {

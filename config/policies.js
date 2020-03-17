@@ -22,7 +22,7 @@ module.exports.policies = {
   ItemController:
   {
     userindex:"isUser",
-    itemsearch:"isUser",
+    usersearch:"isUser",
   },
 
   BookController:

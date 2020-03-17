@@ -27,7 +27,7 @@ module.exports.routes = {
 
   '    /item/userindex': 'ItemController.userindex',
   '    /item/adminindex': 'ItemController.adminindex',
-  '    /item/itemsearch': 'ItemController.itemsearch',
+  '    /item/usersearch': 'ItemController.usersearch',
   '    /item/vitemsearch': 'ItemController.vitemsearch',
 
   '    /item/usernoti': 'ItemController.usernoti',

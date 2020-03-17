@@ -9,7 +9,55 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
+    body {
+      margin: 0 0 55px 0;
+      background-color: #f1e5e8;
+    }
+
+    .bottomnav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 55px;
+      box-shadow: 0 0 0px rgba(255, 255, 255, 0);
+      background-color: #dee7ee;
+      display: flex;
+      overflow-x: auto;
+    }
+
+    .nav__link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      min-width: 50px;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: sans-serif;
+      font-size: 15px;
+      color: #444444;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color 0.1s ease-in-out;
+    }
+
+    /* .nav__link:hover {
+      background-color: #eeeeee;
+    } */
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+    }
+
+    .nav__icon {
+      font-size: 18px;
+    }
+
     #admintable {
       counter-reset: rowNumber;
     }
@@ -126,21 +174,21 @@
       <a class="login" href="/user/login">Login</a>
       <a class="logout" href="/user/logout"> Logout</a>
       <!-- <div><%=req.session.username%></div> -->
-    <!-- </nav>
+<!-- </nav>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4">Real Estate Rental System</h1>
         <p class="lead">Real Estate Rental Management System is a web-based system to facilitate flatshare and
           finding roommates.</p>
       </div>
-    </div> --> 
-    <%- body %>
+    </div> -->
+<%- body %>
 
 
 
 
 
-    <!--
+<!--
         Client-side Templates
         ========================
 
@@ -161,11 +209,11 @@
               stringfile before they're served.
     -->
 
-    <!--TEMPLATES-->
-    <!--TEMPLATES END-->
+<!--TEMPLATES-->
+<!--TEMPLATES END-->
 
 
-    <!--
+<!--
         Server-side View Locals
         ========================
 
@@ -181,7 +229,7 @@
     -->
 
 
-    <!--
+<!--
 
       Client-side Javascript
       ========================
@@ -204,18 +252,15 @@
 
     -->
 
-    <!--SCRIPTS-->
-    <script src="/dependencies/sails.io.js"></script>
-    <!--SCRIPTS END-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
+<!--SCRIPTS-->
+<script src="/dependencies/sails.io.js"></script>
+<!--SCRIPTS END-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
