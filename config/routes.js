@@ -49,11 +49,11 @@ module.exports.routes = {
   'GET /game/gameresult': 'GameController.gameresult',
 
   //UserGiftpage
-  '   /gift/giftsearch': 'GiftController.giftsearch',
+  '   /gift/usergiftsearch': 'GiftController.usergiftsearch',
   'GET /gift/giftresult': 'GiftController.giftresult',
 
   //UserMaterialpage
-  '   /material/materialsearch': 'MaterialController.materialsearch',
+  '   /material/usermaterialsearch': 'MaterialController.usermaterialsearch',
   'GET /material/mamterialresult': 'MaterialController.materialresult',
 
   //VistorBookpage

@@ -7,9 +7,9 @@
 
 module.exports = {
 
-    giftsearch: async function (req, res) {
+    usergiftsearch: async function (req, res) {
         var models = await Gift.find().sort([{ id: 'DESC' }]);
-        return res.view('gift/giftsearch', { gift: models });
+        return res.view('gift/usergiftsearch', { gift: models });
     },
 
     giftresult: async function (req, res) {
