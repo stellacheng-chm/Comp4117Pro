@@ -33,9 +33,9 @@ module.exports = {
 
     },
 
-    vgamesearch: async function (req, res) {
+    vistorgamesearch: async function (req, res) {
         var models = await Game.find().sort([{id:'DESC'}]);
-        return res.view('game/vgamesearch', { game: models});
+        return res.view('game/vistorgamesearch', { game: models});
     },
 
     vgameresult: async function(req, res){
