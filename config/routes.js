@@ -21,45 +21,54 @@ module.exports.routes = {
   //Homepage
   '/': 'UserController.login',
 
+  //Login/Logout
   'GET /user/login': 'UserController.login',
   'POST /user/login': 'UserController.login',
   'POST /user/logout': 'UserController.logout',
 
+  //Usermainpage
   '    /item/userindex': 'ItemController.userindex',
-  '    /item/adminindex': 'ItemController.adminindex',
-  '    /item/usersearch': 'ItemController.usersearch',
-  '    /item/vistorsearch': 'ItemController.vistorsearch',
-
   '    /item/usernoti': 'ItemController.usernoti',
   '    /item/useraccount': 'ItemController.useraccount',
+  '    /item/usersearch': 'ItemController.usersearch',
+
+  //Vistormainpage
+  '    /item/vistorsearch': 'ItemController.vistorsearch',
   '    /item/vistornotlogin': 'ItemController.vistornotlogin',
 
-  //Book user
-  '   /book/booksearch': 'BookController.booksearch',
+  //Adminmainpage
+  '    /item/adminindex': 'ItemController.adminindex',
+
+  //UserBookpage
+  '   /book/userbooksearch': 'BookController.userbooksearch',
   '   /book/bookdetail/:id': 'BookController.bookdetail',
   'GET /book/bookresult': 'BookController.bookresult',
-  //Book vistor
+
+  //UserGamepage
+  '   /game/usergamesearch': 'GameController.usergamesearch',
+  'GET /game/gameresult': 'GameController.gameresult',
+
+  //UserGiftpage
+  '   /gift/giftsearch': 'GiftController.giftsearch',
+  'GET /gift/giftresult': 'GiftController.giftresult',
+
+  //UserMaterialpage
+  '   /material/materialsearch': 'MaterialController.materialsearch',
+  'GET /material/mamterialresult': 'MaterialController.materialresult',
+
+  //VistorBookpage
   '    /book/vbooksearch': 'BookController.vbooksearch',
   'GET /book/vbookresult': 'BookController.vbookresult',
 
-  //Game user
-  '   /game/gamesearch': 'GameController.gamesearch',
-  'GET /game/gameresult': 'GameController.gameresult',
-  //Game vistor
+  //VistorGamepage
   '   /game/vgamesearch': 'GameController.vgamesearch',
   'GET /game/vgameresult': 'GameController.vgameresult',
-
-  //Gift user
-  '   /gift/giftsearch': 'GiftController.giftsearch',
-  'GET /gift/giftresult': 'GiftController.giftresult',
-  //Gift vistor
+  
+  //VistorGiftpage
   '   /gift/vgiftsearch': 'GiftController.vgiftsearch',
   'GET /gift/vgiftresult': 'GiftController.vgiftresult',
 
-  //Material user
-  '   /material/materialsearch': 'MaterialController.materialsearch',
-  'GET /material/mamterialresult': 'MaterialController.materialresult',
-  //Material vistor
+  //VistorMaterialpage
   '   /material/vmaterialsearch': 'MaterialController.vmaterialsearch',
   'GET /material/vmaterialresult': 'MaterialController.vmaterialresult',
 

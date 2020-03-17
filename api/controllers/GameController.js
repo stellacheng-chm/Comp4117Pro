@@ -7,9 +7,9 @@
 
 module.exports = {
 
-    gamesearch: async function (req, res) {
+    usergamesearch: async function (req, res) {
         var models = await Game.find().sort([{id:'DESC'}]);
-        return res.view('game/gamesearch', { game: models});
+        return res.view('game/usergamesearch', { game: models});
     },
 
     gameresult: async function(req, res){

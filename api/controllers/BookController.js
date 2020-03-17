@@ -7,9 +7,9 @@
 
 module.exports = {
 
-    booksearch: async function (req, res) {
+    userbooksearch: async function (req, res) {
         var models = await Book.find().sort([{id:'DESC'}]);
-        return res.view('book/booksearch', { book: models});
+        return res.view('book/userbooksearch', { book: models});
     },
 
     bookresult: async function(req, res){
