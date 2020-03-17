@@ -28,10 +28,11 @@ module.exports.routes = {
   '    /item/userindex': 'ItemController.userindex',
   '    /item/adminindex': 'ItemController.adminindex',
   '    /item/usersearch': 'ItemController.usersearch',
-  '    /item/vitemsearch': 'ItemController.vitemsearch',
+  '    /item/vistorsearch': 'ItemController.vistorsearch',
 
   '    /item/usernoti': 'ItemController.usernoti',
   '    /item/useraccount': 'ItemController.useraccount',
+  '    /item/vistornotlogin': 'ItemController.vistornotlogin',
 
   //Book user
   '   /book/booksearch': 'BookController.booksearch',

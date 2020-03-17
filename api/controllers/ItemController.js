@@ -25,10 +25,10 @@ module.exports = {
         return res.view('item/usersearch');
     },
 
-    vitemsearch: async function (req, res) {
+    vistorsearch: async function (req, res) {
         
 
-        return res.view('item/vitemsearch');
+        return res.view('item/vistorsearch');
     },
 
     usernoti:async function(req,res){
@@ -37,6 +37,10 @@ module.exports = {
 
     useraccount:async function(req,res){
         return res.view('item/useraccount');
+    },
+
+    vistornotlogin:async function(req,res){
+        return res.view('item/vistornotlogin');
     }
   
 
