@@ -53,6 +53,52 @@ module.exports = {
 
     },
 
+    adminmaterialsearch: async function (req, res) {
+        var models = await Material.find().sort([{ id: 'DESC' }]);
+        return res.view('material/adminmaterialsearch', { material: models });
+    },
+
+    adminmaterialresult: async function (req, res) {
+        const qCategory = req.query.category || "";
+        const qMaterialname = req.query.materialname;
+        const qAmount = parseInt(req.query.amount);
+
+        if (isNaN(qAmount)) {
+            var models = await Material.find({
+                where: {
+
+                    category: { contains: qCategory },
+                    materialname: { contains: qMaterialname },
+                }
+
+            }).sort([{ id: 'DESC' }]);
+        } else {
+            var models = await Material.find({
+                where: {
+
+                    category: { contains: qCategory },
+                    qMaterialname: { contains: qMaterialname },
+                    qAmount: Amount
+                }
+
+            }).sort([{ id: 'DESC' }]);
+        }
+
+
+        return res.view('material/adminmaterialresult', { material: models });
+
+    },
+
+    adminmaterialdetail: async function (req, res) {
+
+        var model = await Material.findOne(req.params.id);
+
+        if (!model) return res.notFound();
+
+        return res.view('material/adminmaterialdetail', { material: model });
+
+    },
+
 
 };
 

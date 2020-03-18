@@ -79,8 +79,8 @@ module.exports.routes = {
 
   //AdminMaterialpage
   '   /material/adminmaterialsearch': 'MaterialController.adminmaterialsearch',
-  'GET /material/adminrmamterialresult': 'MaterialController.adminrmaterialresult',
-  '   /material/adminrmaterialdetail/:id': 'MaterialController.adminrmaterialdetail',
+  'GET /material/adminmamterialresult': 'MaterialController.adminmaterialresult',
+  '   /material/adminmaterialdetail/:id': 'MaterialController.adminmaterialdetail',
 
   //VistorBookpage
   '    /book/vistorbooksearch': 'BookController.vistorbooksearch',
