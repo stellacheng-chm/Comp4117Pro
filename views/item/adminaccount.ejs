@@ -7,29 +7,27 @@
         <br>
         <br>
 
+        <div style="position: relative;" class="form-group col-12 col-xl-12">
+            <label style="position: relative;bottom: -5px;">用戶名稱: <%=req.session.username%></label>
+        </div>
 
+        <div>
+            <form action="/user/logout" method="POST">
+                <button type="submit" class="btn btn-primary center">登出</a>
+            </form>
+        </div>
 
+        <br>
 
-        <form action="/user/login" method="POST">
-            <div style="position: relative;" class="form-group col-12 col-xl-12">
-                <label style="position: relative;bottom: -5px;">用戶名稱: <%=req.session.username%></label>
-            </div>
-            <button type="submit" class="btn btn-primary center">登出</a>
-        </form>
+        <button type="submit" class="btn btn-outline-danger center">增/刪用戶</button>
 
+        <br>
 
+        <button type="submit" class="btn btn-outline-dark center">更改密碼</button>
 
+        <br>
 
-
-
-        
-            <button type="submit" class="button">增/刪用戶</button>
-
-            <button type="submit" class="btn btn-primary">更改資料</button>
-
-            <button type="submit" class="btn btn-primary">更改密碼</button>
-        
-
+        <button type="submit" class="btn btn-outline-dark center">更改資料</button>
 
         <nav class="bottomnav fixed-bottom">
             <a href="/item/adminindex" class="nav__link">
