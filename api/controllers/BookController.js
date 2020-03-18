@@ -40,7 +40,7 @@ module.exports = {
         return res.view('book/vistorbooksearch', { book: models});
     },
 
-    vbookresult: async function(req, res){
+    vistorbookresult: async function(req, res){
         const qCatrgory=req.query.category || "";
         const qBookname = req.query.bookname;
         const qAuthor = req.query.author;
@@ -59,7 +59,7 @@ module.exports = {
             
         }).sort([{id:'DESC'}]);
 
-        return res.view('book/vbookresult', {book:models});
+        return res.view('book/vistorbookresult', {book:models});
 
     },
 

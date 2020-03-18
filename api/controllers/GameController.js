@@ -38,7 +38,7 @@ module.exports = {
         return res.view('game/vistorgamesearch', { game: models});
     },
 
-    vgameresult: async function(req, res){
+    vistorgameresult: async function(req, res){
         const qCatrgory=req.query.category || "";
         const qGamename = req.query.gamename;
         const qPublisher = req.query.publisher;
@@ -55,7 +55,7 @@ module.exports = {
             
         }).sort([{id:'DESC'}]);
 
-        return res.view('game/vgameresult', {game:models});
+        return res.view('game/vistorgameresult', {game:models});
 
     },
   
