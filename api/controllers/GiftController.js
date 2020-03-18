@@ -12,7 +12,7 @@ module.exports = {
         return res.view('gift/usergiftsearch', { gift: models });
     },
 
-    giftresult: async function (req, res) {
+    usergiftresult: async function (req, res) {
         const qCatrgory = req.query.category || "";
         const qGiftname = req.query.giftname;
         const qAmount = parseInt(req.query.amount);
@@ -69,7 +69,7 @@ module.exports = {
             }).sort([{ id: 'DESC' }]);
         }
 
-        return res.view('gift/giftresult', { gift: models });
+        return res.view('gift/usergiftresult', { gift: models });
 
     },
 

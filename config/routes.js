@@ -50,7 +50,7 @@ module.exports.routes = {
 
   //UserGiftpage
   '   /gift/usergiftsearch': 'GiftController.usergiftsearch',
-  'GET /gift/giftresult': 'GiftController.giftresult',
+  'GET /gift/usergiftresult': 'GiftController.usergiftresult',
 
   //UserMaterialpage
   '   /material/usermaterialsearch': 'MaterialController.usermaterialsearch',

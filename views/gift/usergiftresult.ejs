@@ -7,37 +7,6 @@
         <br>
         <br>
 
-        <h2 float:right>禮物搜尋</h2>
-        <label>類型:</label>
-
-        <form action="/gift/usergiftresult" method="GET">
-            <div class="form-group">
-                <select name="category" class="form-control" required>
-                    <option value="">選擇禮物種類</option>
-                    <option value="小型禮物">小型禮物</option>
-                    <option value="中型禮物">中型禮物</option>
-                    <option value="大型禮物">大型禮物</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>名稱:</label>
-                <input type="string" class="form-control" name="giftname">
-            </div>
-            <div class="form-group">
-                <label>數量:</label>
-                <input type="number" class="form-control" name="amount">
-            </div>
-            <div class="form-group">
-                <label>價值:</label>
-                <input type="number" class="form-control" name="value">
-            </div>
-            <div class="form-group">
-                <label>捐贈者:</label>
-                <input type="string" class="form-control" name="donator">
-            </div>
-            <button type="sumbit" class="btn btn-primary">確認搜尋</button>
-        </form>
-
         <div class="row">
             <% gift.forEach(function(model) { %>
             <div class="card col-xl-6 col-sm-12">
