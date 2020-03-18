@@ -43,6 +43,42 @@ module.exports = {
 
     },
 
+    admingamesearch: async function (req, res) {
+        var models = await Game.find().sort([{id:'DESC'}]);
+        return res.view('game/admingamesearch', { game: models});
+    },
+
+    admingameresult: async function(req, res){
+        const qCatrgory=req.query.category || "";
+        const qGamename = req.query.gamename;
+        const qPublisher = req.query.publisher;
+        const qSerialno = req.query.serialno;
+
+        var models = await Game.find({
+            where:{
+            
+            category:{contains:qCatrgory},
+            gamename:{contains:qGamename},
+            publisher:{contains:qPublisher},
+            serialno:{contains:qSerialno},
+            }
+            
+        }).sort([{id:'DESC'}]);
+
+        return res.view('game/admingameresult', {game:models});
+
+    },
+
+    admingamedetail: async function (req, res) {
+
+        var model = await Game.findOne(req.params.id);
+
+        if (!model) return res.notFound();
+
+        return res.view('game/admingamedetail', { game: model });
+
+    },
+
     vistorgamesearch: async function (req, res) {
         var models = await Game.find().sort([{id:'DESC'}]);
         return res.view('game/vistorgamesearch', { game: models});
