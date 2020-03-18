@@ -62,6 +62,26 @@ module.exports.routes = {
   'GET /material/usermamterialresult': 'MaterialController.usermaterialresult',
   '   /material/usermaterialdetail/:id': 'MaterialController.usermaterialdetail',
 
+  //AdminBookpage
+  '   /book/adminbooksearch': 'BookController.adminbooksearch',
+  'GET /book/adminbookresult': 'BookController.adminbookresult',
+  '   /book/adminbookdetail/:id': 'BookController.adminbookdetail',
+
+  //AdminGamepage
+  '   /game/admingamesearch': 'GameController.admingamesearch',
+  'GET /game/admingameresult': 'GameController.admingameresult',
+  '   /game/admingamedetail/:id': 'GameController.admingamedetail',
+
+  //AdminGiftpage
+  '   /gift/admingiftsearch': 'GiftController.admingiftsearch',
+  'GET /gift/admingiftresult': 'GiftController.admingiftresult',
+  '   /gift/admingiftdetail/:id': 'GiftController.admingiftdetail',
+
+  //AdminMaterialpage
+  '   /material/adminmaterialsearch': 'MaterialController.adminmaterialsearch',
+  'GET /material/adminrmamterialresult': 'MaterialController.adminrmaterialresult',
+  '   /material/adminrmaterialdetail/:id': 'MaterialController.adminrmaterialdetail',
+
   //VistorBookpage
   '    /book/vistorbooksearch': 'BookController.vistorbooksearch',
   'GET /book/vistorbookresult': 'BookController.vistorbookresult',
@@ -70,13 +90,7 @@ module.exports.routes = {
   '   /game/vistorgamesearch': 'GameController.vistorgamesearch',
   'GET /game/vistorgameresult': 'GameController.vistorgameresult',
   
-  //VistorGiftpage
-  '   /gift/vgiftsearch': 'GiftController.vgiftsearch',
-  'GET /gift/vgiftresult': 'GiftController.vgiftresult',
-
-  //VistorMaterialpage
-  '   /material/vmaterialsearch': 'MaterialController.vmaterialsearch',
-  'GET /material/vmaterialresult': 'MaterialController.vmaterialresult',
+  
 
 
   
