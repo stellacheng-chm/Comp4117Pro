@@ -17,28 +17,39 @@ module.exports = {
         const qMaterialname = req.query.materialname;
         const qAmount = parseInt(req.query.amount);
 
-        if (isNaN(qAmount)){
+        if (isNaN(qAmount)) {
             var models = await Material.find({
                 where: {
 
                     category: { contains: qCategory },
-                    qMaterialname: { contains: qMaterialname },
+                    materialname: { contains: qMaterialname },
                 }
 
             }).sort([{ id: 'DESC' }]);
-        }else{
+        } else {
             var models = await Material.find({
                 where: {
 
                     category: { contains: qCategory },
                     qMaterialname: { contains: qMaterialname },
-                    qAmount:Amount
+                    qAmount: Amount
                 }
 
-            }).sort([{ id: 'DESC' }]);}
-            
+            }).sort([{ id: 'DESC' }]);
+        }
+
 
         return res.view('material/usermaterialresult', { material: models });
+
+    },
+
+    usermaterialdetail: async function (req, res) {
+
+        var model = await Material.findOne(req.params.id);
+
+        if (!model) return res.notFound();
+
+        return res.view('material/usermaterialdetail', { material: model });
 
     },
 

@@ -57,6 +57,7 @@ module.exports.routes = {
   //UserMaterialpage
   '   /material/usermaterialsearch': 'MaterialController.usermaterialsearch',
   'GET /material/usermamterialresult': 'MaterialController.usermaterialresult',
+  '   /material/usermaterialdetail/:id': 'MaterialController.usermaterialdetail',
 
   //VistorBookpage
   '    /book/vistorbooksearch': 'BookController.vistorbooksearch',
