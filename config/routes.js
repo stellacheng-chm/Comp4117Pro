@@ -38,6 +38,9 @@ module.exports.routes = {
 
   //Adminmainpage
   '    /item/adminindex': 'ItemController.adminindex',
+  '    /item/adminnoti': 'ItemController.adminnoti',
+  '    /item/adminaccount': 'ItemController.adminaccount',
+  '    /item/adminsearch': 'ItemController.adminsearch',
 
   //UserBookpage
   '   /book/userbooksearch': 'BookController.userbooksearch',

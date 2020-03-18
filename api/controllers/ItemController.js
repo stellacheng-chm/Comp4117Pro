@@ -31,6 +31,12 @@ module.exports = {
         return res.view('item/vistorsearch');
     },
 
+    adminsearch: async function (req, res) {
+        
+
+        return res.view('item/adminsearch');
+    },
+
     usernoti:async function(req,res){
         return res.view('item/usernoti');
     },
@@ -41,7 +47,19 @@ module.exports = {
 
     vistornotlogin:async function(req,res){
         return res.view('item/vistornotlogin');
-    }
+    },
+
+    adminnoti: async function (req, res) {
+        
+
+        return res.view('item/adminnoti');
+    },
+
+    adminaccount: async function (req, res) {
+        
+
+        return res.view('item/adminaccount');
+    },
   
 
 };
