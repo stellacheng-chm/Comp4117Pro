@@ -42,7 +42,7 @@ module.exports.routes = {
   //UserBookpage
   '   /book/userbooksearch': 'BookController.userbooksearch',
   '   /book/bookdetail/:id': 'BookController.bookdetail',
-  'GET /book/bookresult': 'BookController.bookresult',
+  'GET /book/userbookresult': 'BookController.userbookresult',
 
   //UserGamepage
   '   /game/usergamesearch': 'GameController.usergamesearch',
