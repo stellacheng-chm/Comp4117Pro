@@ -83,12 +83,12 @@ module.exports = {
 
     },
 
-    vgiftsearch: async function (req, res) {
+    admingiftsearch: async function (req, res) {
         var models = await Gift.find().sort([{ id: 'DESC' }]);
-        return res.view('gift/vgiftsearch', { gift: models });
+        return res.view('gift/admingiftsearch', { gift: models });
     },
 
-    vgiftresult: async function (req, res) {
+    admingiftresult: async function (req, res) {
         const qCatrgory = req.query.category || "";
         const qGiftname = req.query.giftname;
         const qAmount = parseInt(req.query.amount);
@@ -145,7 +145,17 @@ module.exports = {
             }).sort([{ id: 'DESC' }]);
         }
 
-        return res.view('gift/vgiftresult', { gift: models });
+        return res.view('gift/admingiftresult', { gift: models });
+
+    },
+
+    admingiftdetail: async function (req, res) {
+
+        var model = await Gift.findOne(req.params.id);
+
+        if (!model) return res.notFound();
+
+        return res.view('gift/admingiftdetail', { gift: model });
 
     },
 
