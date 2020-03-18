@@ -35,16 +35,42 @@
                         <th id="detail" scope="row">ISBN: <%=book.ISBN %></th>
                     </tr>
 
-                    <div>
-                        <button type="submit" class="btn btn-primary">即時借取</button>
-
-                        <button type="submit" class="btn btn-primary">預訂</button>
-                    </div>
-
                 </table>
 
             </div>
         </div>
     </div>
+
+    
+    <button type="submit" class="btn btn-primary center">即時借取</button>
+    <br>
+    <button type="submit" class="btn btn-primary center">預訂</button>
+
+    <nav class="bottomnav fixed-bottom">
+        <a href="/item/userindex" class="nav__link">
+            <i class="material-icons">
+                home
+            </i>
+            <span class="nav__text">主頁</span>
+        </a>
+        <a href="/item/usersearch" class="nav__link nav__link--active">
+            <i class="material-icons">
+                search
+            </i>
+            <span class="nav__text">搜尋</span>
+        </a>
+        <a href="/item/usernoti" class="nav__link">
+            <i class="material-icons">
+                email
+            </i>
+            <span class="nav__text">通知</span>
+        </a>
+        <a href="/item/useraccount" class="nav__link">
+            <i class="material-icons">
+                account_circle
+            </i>
+            <span class="nav__text">帳戶</span>
+        </a>
+    </nav>
     </div>
 </body>
