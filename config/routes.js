@@ -47,6 +47,7 @@ module.exports.routes = {
   //UserGamepage
   '   /game/usergamesearch': 'GameController.usergamesearch',
   'GET /game/usergameresult': 'GameController.usergameresult',
+  '   /game/usergamedetail/:id': 'GameController.usergamedetail',
 
   //UserGiftpage
   '   /gift/usergiftsearch': 'GiftController.usergiftsearch',

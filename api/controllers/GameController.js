@@ -33,6 +33,16 @@ module.exports = {
 
     },
 
+    usergamedetail: async function (req, res) {
+
+        var model = await Game.findOne(req.params.id);
+
+        if (!model) return res.notFound();
+
+        return res.view('game/usergamedetail', { game: model });
+
+    },
+
     vistorgamesearch: async function (req, res) {
         var models = await Game.find().sort([{id:'DESC'}]);
         return res.view('game/vistorgamesearch', { game: models});

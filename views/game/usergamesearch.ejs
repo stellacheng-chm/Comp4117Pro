@@ -9,7 +9,7 @@
 
         <h2 float:right>桌上遊戲搜尋</h2>
         <label>種類:</label>
-        
+
         <form action="/game/usergameresult" method="GET">
             <div class="form-group">
                 <select name="category" class="form-control" required>
@@ -39,7 +39,7 @@
             <% game.forEach(function(model) { %>
             <div class="card col-xl-6 col-sm-12">
                 <div id="title">
-                    <a href="/"><%=model.name%> </a>
+                    <a href="/game/usergamedetail/<%=model.id%>">詳細資料頁面 </a>
                 </div>
                 <p></p>
                 <div id="info">
