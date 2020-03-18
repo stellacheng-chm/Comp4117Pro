@@ -12,7 +12,7 @@ module.exports = {
         return res.view('game/usergamesearch', { game: models});
     },
 
-    gameresult: async function(req, res){
+    usergameresult: async function(req, res){
         const qCatrgory=req.query.category || "";
         const qGamename = req.query.gamename;
         const qPublisher = req.query.publisher;
@@ -29,7 +29,7 @@ module.exports = {
             
         }).sort([{id:'DESC'}]);
 
-        return res.view('game/gameresult', {game:models});
+        return res.view('game/usergameresult', {game:models});
 
     },
 

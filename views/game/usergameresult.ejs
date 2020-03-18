@@ -6,34 +6,6 @@
 
         <br>
         <br>
-
-        <h2 float:right>桌上遊戲搜尋</h2>
-        <label>種類:</label>
-        <form action="/game/usergameresult" method="GET">
-            <div class="form-group">
-                <select name="category" class="form-control" required>
-                    <option value="">選擇桌遊種類</option>
-                    <option value="棋類遊戲">棋類遊戲</option>
-                    <option value="卡牌遊戲">卡牌遊戲</option>
-                    <option value="骰子遊戲">骰子遊戲</option>
-                    <option value="紙筆遊戲">紙筆遊戲</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>名稱:</label>
-                <input type="string" class="form-control" name="gamename">
-            </div>
-            <div class="form-group">
-                <label>出版商:</label>
-                <input type="string" class="form-control" name="publisher">
-            </div>
-            <div class="form-group">
-                <label>編號:</label>
-                <input type="string" class="form-control" name="serialno">
-            </div>
-            <button type="sumbit" class="btn btn-primary">確認搜尋</button>
-        </form>
-
         <div class="row">
             <% game.forEach(function(model) { %>
             <div class="card col-xl-6 col-sm-12">
@@ -68,6 +40,7 @@
             <% }); %>
 
         </div>
+
         <nav class="bottomnav fixed-bottom">
             <a href="/item/userindex" class="nav__link">
                 <i class="material-icons">
@@ -94,6 +67,7 @@
                 <span class="nav__text">帳戶</span>
             </a>
         </nav>
+
 
     </div>
 </body>
