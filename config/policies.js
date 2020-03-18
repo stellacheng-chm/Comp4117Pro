@@ -23,24 +23,33 @@ module.exports.policies = {
   {
     userindex:"isUser",
     usersearch:"isUser",
+    usernoti:"isUser",
+    useraccount:"isUser",
   },
 
   BookController:
   {
-    booksearch:"isUser",
-    bookresult:"isUser",
+    userbooksearch:"isUser",
+    userbookresult:"isUser",
+    userbookdetail:"isUser",
   },
 
   GameController:
   {
-    gamesearch:"isUser",
-    gameresult:"isUser",
+    usergamesearch:"isUser",
+    usergameresult:"isUser",
   },
 
   GiftController:
   {
-    giftsearch:"isUser",
-    giftresult:"isUser",
+    usergiftsearch:"isUser",
+    usergiftresult:"isUser",
+  },
+
+  MaterialContoller:
+  {
+    usermaterialsearch:"isUser",
+    usermaterialresult:"isUser",
   }
 
 };
