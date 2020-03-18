@@ -25,6 +25,10 @@ module.exports.policies = {
     usersearch:"isUser",
     usernoti:"isUser",
     useraccount:"isUser",
+    adminindex:"isAdmin",
+    adminsearch:"isAdmin",
+    adminnoti:"isAdmin",
+    adminaccount:"isAdmin",
   },
 
   BookController:
@@ -32,24 +36,39 @@ module.exports.policies = {
     userbooksearch:"isUser",
     userbookresult:"isUser",
     userbookdetail:"isUser",
+    adminbooksearch:"isAdmin",
+    adminbookresult:"isAdmin",
+    adminbookdetail:"isAdmin",
   },
 
   GameController:
   {
     usergamesearch:"isUser",
     usergameresult:"isUser",
+    usergamedetail:"isUser",
+    admingamesearch:"isAdmin",
+    admingameresult:"isAdmin",
+    admingamedetail:"isAdmin",
   },
 
   GiftController:
   {
     usergiftsearch:"isUser",
     usergiftresult:"isUser",
+    usergamedetail:"isUser",
+    admingiftsearch:"isAdmin",
+    admingiftresult:"isAdmin",
+    admingiftdetail:"isAdmin",
   },
 
   MaterialContoller:
   {
     usermaterialsearch:"isUser",
     usermaterialresult:"isUser",
+    usermaterialdetail:"isUser",
+    adminmaterialsearch:"isAdmin",
+    adminmaterialresult:"isAdmin",
+    adminmaterialdetail:"isAdmin",
   }
 
 };
