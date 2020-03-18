@@ -12,26 +12,18 @@
 
             <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
-                <h2><strong>用戶資料</strong></h2>
-
                 <div style="position: relative;" class="form-group col-12 col-xl-12">
-                    <label style="position: relative;bottom: -5px;">用戶名稱:</label>
+                    <label style="position: relative;bottom: -5px;">用戶名稱: <%=req.session.username%></label>
                 </div>
 
+                <a href="/user/logout" class="btn btn-primary center">登出</a>
 
-                <div class="form-group col-12 col-xl-12"
-                    style="display: flex;justify-content: space-between;align-items: center;    padding-right: 0;">
+            </div>
 
-                    <label style="margin-right: 20px;">已借用的物品數量:</label>
+            <div id="outer">
+                <button class="inner2" type="submit" class="btn btn-primary">更改資料</button>
 
-                </div>
-
-                <div>
-                    <button type="submit" class="btn btn-primary">更改資料</button>
-
-                    <button type="submit" class="btn btn-primary">更改密碼</button>
-                </div>
-
+                <button class="inner2" type="submit" class="btn btn-primary">更改密碼</button>
             </div>
 
             <nav class="bottomnav fixed-bottom">
