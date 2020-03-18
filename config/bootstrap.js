@@ -140,10 +140,10 @@ module.exports.bootstrap = async function () {
   }
 
   await Material.createEach([
-    {mtlname:"原子筆", mtlquantity:"10", mtlcategory:"文具", mtllocation:"C架11行",  mtlphoto:"https://s.yimg.com/zp/MerchandiseImages/801A1EA020-SP-7138139.jpg"},
+    {materialname:"原子筆", amount:"10", category:"文具", location:"C架11行",  photo:"https://s.yimg.com/zp/MerchandiseImages/801A1EA020-SP-7138139.jpg"},
 
-    {mtlname:"IPAD", mtlquantity:"1", mtlcategory:"電子產品",mtllocation:"C架11行",
-    mtlphoto:"https://buy4u.hk/image/catalog/product%20gallery/gadget/apple/ipad%20mini%202019/ipad_mini_2019_2.jpg"},
+    {materialname:"IPAD", amount:"1", category:"電子產品",location:"C架11行",
+    photo:"https://buy4u.hk/image/catalog/product%20gallery/gadget/apple/ipad%20mini%202019/ipad_mini_2019_2.jpg"},
 
 
 ])

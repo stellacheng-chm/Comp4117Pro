@@ -7,37 +7,15 @@
         <br>
         <br>
 
-        <h2 float:right>物資搜尋</h2>
-        <label>類型:</label>
-        <form action="/material/usermaterialresult" method="GET">
-            <div class="form-group">
-                <select name="category" class="form-control" required>
-                    <option value="">選擇物資種類</option>
-                    <option value="文具">文具</option>
-                    <option value="電子產品">電子產品</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>物資名稱:</label>
-                <input type="string" class="form-control" name="materialname">
-            </div>
-            <div class="form-group">
-                <label>數量:</label>
-                <input type="number" class="form-control" name="amount">
-            </div>
-
-            <button type="sumbit" class="btn btn-primary">確認搜尋</button>
-        </form>
-
         <div class="row">
             <% material.forEach(function(model) { %>
             <div class="card col-xl-6 col-sm-12">
                 <div id="title">
-                    <a href="/">詳細資料頁面 </a>
+                    <a href="/"><%=model.name%> </a>
                 </div>
                 <p></p>
                 <div id="info">
-                    <img src=<%=model.photo %> id="photo" width="150" height="150">
+                    <img src=<%=model. photo %> id="photo" width="150" height="150">
                     <ul class="list-group">
                         <li class="list-group-item" id="info">
                             <span id="briefinfo">物資名稱:</span>
@@ -51,11 +29,6 @@
                             <span id="briefinfo">數量:</span>
                             <%= model.amount %>
                         </li>
-                        <!-- 
-                        <li class="list-group-item" id="info">
-                            <span id="briefinfo">存放位置</span>
-                            <%= model.publisher %>
-                        </li> -->
 
                     </ul>
                 </div>
