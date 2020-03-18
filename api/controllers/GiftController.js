@@ -73,6 +73,16 @@ module.exports = {
 
     },
 
+    usergiftdetail: async function (req, res) {
+
+        var model = await Gift.findOne(req.params.id);
+
+        if (!model) return res.notFound();
+
+        return res.view('gift/usergiftdetail', { gift: model });
+
+    },
+
     vgiftsearch: async function (req, res) {
         var models = await Gift.find().sort([{ id: 'DESC' }]);
         return res.view('gift/vgiftsearch', { gift: models });
