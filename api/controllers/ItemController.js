@@ -60,6 +60,28 @@ module.exports = {
 
         return res.view('item/adminaccount');
     },
+
+    adminadditem: async function (req, res) {
+        
+
+        return res.view('item/adminadditem');
+    },
+
+    
+    adminaddbook: async function (req, res) {
+
+        if (req.method == "GET")
+            return res.view('item/adminaddbook');
+
+        if (!req.body.Book)
+            return res.badRequest("Form-data not received.");
+
+        await Book.create(req.body.Book);
+
+        return res.view('item/adminaddbook')
+    },
+
+    
   
 
 };
