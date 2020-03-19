@@ -1,40 +1,29 @@
 <body onload="pageLoaded()">
+    <br>
+
+    <img src="https://cubc.org.hk/wp-content/uploads/2016/08/logo_retina_x2.png" class="center">
+
+    <br>
+    <br>
     <div class="container">
-        <br>
+        <h2 class="center">增加用戶</h2>
+        <form action="/item/adminaddaccount" method="POST">
+            <div class="form-group row">
+                <div class="col-xl-6 col-form-label">
+                    <label>用戶名稱:</label>
+                    <input type="text" class="form-control" name="User[username]" required>
+                </div>
 
-        <img src="https://cubc.org.hk/wp-content/uploads/2016/08/logo_retina_x2.png" class="center">
+                <div class="col-xl-6 col-form-label">
+                    <label>密碼:</label>
+                    <input type="password" class="form-control" name="User[password]" required>
 
-        <br>
-        <br>
+                </div>
 
-        <div style="position: relative;" class="form-group col-12 col-xl-12">
-            <label style="position: relative;bottom: -5px;">用戶名稱: <%=req.session.username%></label>
-        </div>
+                <button type="sumbit" class="btn btn-primary center">增加用戶</button>
 
-        <div>
-            <form action="/user/logout" method="POST">
-                <button type="submit" class="btn btn-primary center">登出</a>
-            </form>
-        </div>
-
-        <br>
-
-        <form action="/item/adminaddaccount">
-            <button type="submit" class="btn btn-outline-danger center">增加用戶</button>
         </form>
-        
 
-        <br>
-
-        <button type="submit" class="btn btn-outline-danger center">修改用戶資料/刪除用戶</button>
-
-        <br>
-
-        <button type="submit" class="btn btn-outline-dark center">更改密碼</button>
-
-        <br>
-
-        <button type="submit" class="btn btn-outline-dark center">更改資料</button>
 
         <nav class="bottomnav fixed-bottom">
             <a href="/item/adminindex" class="nav__link">

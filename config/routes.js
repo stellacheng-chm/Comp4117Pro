@@ -46,6 +46,7 @@ module.exports.routes = {
   '    /item/adminaddgame': 'ItemController.adminaddgame',
   '    /item/adminaddgift': 'ItemController.adminaddgift',
   '    /item/adminaddmaterial': 'ItemController.adminaddmaterial',
+  '    /item/adminaddaccount': 'ItemController.adminaddaccount',
 
   //UserBookpage
   '   /book/userbooksearch': 'BookController.userbooksearch',

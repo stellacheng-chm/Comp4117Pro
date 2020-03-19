@@ -8,66 +8,66 @@
 module.exports = {
 
     userindex: async function (req, res) {
-        
+
 
         return res.view('item/userindex');
     },
 
     adminindex: async function (req, res) {
-        
+
 
         return res.view('item/adminindex');
     },
 
     usersearch: async function (req, res) {
-        
+
 
         return res.view('item/usersearch');
     },
 
     vistorsearch: async function (req, res) {
-        
+
 
         return res.view('item/vistorsearch');
     },
 
     adminsearch: async function (req, res) {
-        
+
 
         return res.view('item/adminsearch');
     },
 
-    usernoti:async function(req,res){
+    usernoti: async function (req, res) {
         return res.view('item/usernoti');
     },
 
-    useraccount:async function(req,res){
+    useraccount: async function (req, res) {
         return res.view('item/useraccount');
     },
 
-    vistornotlogin:async function(req,res){
+    vistornotlogin: async function (req, res) {
         return res.view('item/vistornotlogin');
     },
 
     adminnoti: async function (req, res) {
-        
+
 
         return res.view('item/adminnoti');
     },
 
     adminaccount: async function (req, res) {
-        
+
 
         return res.view('item/adminaccount');
     },
 
     adminadditem: async function (req, res) {
-        
+
 
         return res.view('item/adminadditem');
     },
 
-    
+
     adminaddbook: async function (req, res) {
 
         if (req.method == "GET")
@@ -120,8 +120,23 @@ module.exports = {
         return res.view('item/adminaddmaterial')
     },
 
-    
-  
+    adminaddaccount: async function (req, res) {
+
+        if (req.method == "GET")
+            return res.view('item/adminaddaccount');
+
+        if (!req.body.User)
+            return res.badRequest("Form-data not received.");
+
+        const hash = await sails.bcrypt.hash(req.body.password, 10);
+
+        await User.create([{username:req.body.username,password:hash,role:"user"}]);
+
+        return res.view('item/adminaddaccount')
+    },
+
+
+
 
 };
 
