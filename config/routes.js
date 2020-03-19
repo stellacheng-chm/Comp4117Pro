@@ -73,11 +73,14 @@ module.exports.routes = {
   '   /book/adminbooksearch': 'BookController.adminbooksearch',
   'GET /book/adminbookresult': 'BookController.adminbookresult',
   '   /book/adminbookdetail/:id': 'BookController.adminbookdetail',
+  '   /book/adminbookedit': 'BookController.adminbookedit',
 
   //AdminGamepage
   '   /game/admingamesearch': 'GameController.admingamesearch',
   'GET /game/admingameresult': 'GameController.admingameresult',
   '   /game/admingamedetail/:id': 'GameController.admingamedetail',
+    '   /game/admingamedetail/:id': 'GameController.admingamedetail',
+
 
   //AdminGiftpage
   '   /gift/admingiftsearch': 'GiftController.admingiftsearch',

@@ -121,6 +121,11 @@ module.exports = {
 
     },
 
+    adminbookedit: async function (req, res) {
+        var models = await Book.find().sort([{id:'DESC'}]);
+        return res.view('book/adminbookedit', { book: models});
+    },
+
     
   
 

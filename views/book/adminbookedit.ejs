@@ -7,27 +7,38 @@
         <br>
         <br>
 
+        <div class="table-responsive">
+            <table class="table " id="admintable">
 
-        <br>
-        <form action="/book/adminbookedit">
-            <button type="submit" class="btn btn-outline-dark center">修改書本資料/刪減書本</button>
-        </form>
+                <% book.forEach( function(model) { %>
 
-        <br>
-        <form action="/game/admingameedit">
-            <button type="submit" class="btn btn-outline-dark center">修改桌遊資料/刪減桌遊</button>
-        </form>
 
-        
-        <br>
-        <form action="/gift/admingiftedit">
-            <button type="submit" class="btn btn-outline-dark center">修改禮物資料/刪減禮物</button>
-        </form>
+                <tr class="tr2">
 
-        <br>
-        <form action="/material/adminmaterialedit">
-            <button type="submit" class="btn btn-outline-dark center">修改物資資料/刪減物資</button>
-        </form>
+                    <th scope="row"></th>
+                    <td><a href="/book/adminbookdetail/<%=model.id%>"><%=model.bookname%></a></td>
+                    <td>
+                        <a href="/apartment/adminbookupdate/<%=model.id%>" id="edit">
+                            修改
+                        </a>
+                    </td>
+                    <td>
+                        <span id="deleteid"><%= model.id %></span>
+
+                        <button class="'btn btn-danger" type="button" onclick="deleteBook('<%=model.id%>')">
+                            Delete</button>
+
+                    </td>
+
+                </tr>
+
+
+                <% }); %>
+
+            </table>
+        </div>
+
+
 
         <nav class="bottomnav fixed-bottom">
             <a href="/item/adminindex" class="nav__link">
