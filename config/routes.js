@@ -85,10 +85,12 @@ module.exports.routes = {
   //VistorBookpage
   '    /book/vistorbooksearch': 'BookController.vistorbooksearch',
   'GET /book/vistorbookresult': 'BookController.vistorbookresult',
+  '   /book/vistorbookdetail/:id': 'BookController.vistorbookdetail',
 
   //VistorGamepage
   '   /game/vistorgamesearch': 'GameController.vistorgamesearch',
   'GET /game/vistorgameresult': 'GameController.vistorgameresult',
+  '   /game/vistorgamedetail/:id': 'GameController.vistorgamedetail',
   
   
 
