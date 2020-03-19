@@ -67,6 +67,11 @@ module.exports = {
         return res.view('item/adminadditem');
     },
 
+    adminedititem: async function (req, res) {
+
+
+        return res.view('item/adminedititem');
+    },
 
     adminaddbook: async function (req, res) {
 
