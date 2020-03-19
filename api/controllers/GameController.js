@@ -104,6 +104,16 @@ module.exports = {
         return res.view('game/vistorgameresult', {game:models});
 
     },
+
+    vistorgamedetail: async function (req, res) {
+
+        var model = await Game.findOne(req.params.id);
+
+        if (!model) return res.notFound();
+
+        return res.view('game/vistorgamedetail', { game: model });
+
+    },
   
 
 };
