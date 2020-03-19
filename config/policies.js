@@ -29,6 +29,11 @@ module.exports.policies = {
     adminsearch:"isAdmin",
     adminnoti:"isAdmin",
     adminaccount:"isAdmin",
+    adminadditem:"isAdmin",
+    adminaddbook:"isAdmin",
+    adminaddgame:"isAdmin",
+    adminaddgift:"isAdmin",
+    adminaddmaterial:"isAdmin",
   },
 
   BookController:
