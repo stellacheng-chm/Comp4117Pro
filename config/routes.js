@@ -82,18 +82,28 @@ module.exports.routes = {
   '   /game/admingamesearch': 'GameController.admingamesearch',
   'GET /game/admingameresult': 'GameController.admingameresult',
   '   /game/admingamedetail/:id': 'GameController.admingamedetail',
-    '   /game/admingamedetail/:id': 'GameController.admingamedetail',
+  '   /game/admingameedit': 'GameController.admingameedit',
+  'GET /game/admingameupdate/:id': 'GameController.admingameupdate',
+  'POST /game/admingameupdate/:id': 'GameController.admingameupdate',
+  'POST /game/admingamedelete/:id': 'GameController.admingamedelete',
+  
 
 
   //AdminGiftpage
   '   /gift/admingiftsearch': 'GiftController.admingiftsearch',
   'GET /gift/admingiftresult': 'GiftController.admingiftresult',
   '   /gift/admingiftdetail/:id': 'GiftController.admingiftdetail',
+  'GET /book/adminbookupdate/:id': 'BookController.adminbookupdate',
+  'POST /book/adminbookupdate/:id': 'BookController.adminbookupdate',
+  'POST /book/adminbookdelete/:id': 'BookController.adminbookdelete',
 
   //AdminMaterialpage
   '   /material/adminmaterialsearch': 'MaterialController.adminmaterialsearch',
   'GET /material/adminmamterialresult': 'MaterialController.adminmaterialresult',
   '   /material/adminmaterialdetail/:id': 'MaterialController.adminmaterialdetail',
+  'GET /book/adminbookupdate/:id': 'BookController.adminbookupdate',
+  'POST /book/adminbookupdate/:id': 'BookController.adminbookupdate',
+  'POST /book/adminbookdelete/:id': 'BookController.adminbookdelete',
 
   //VistorBookpage
   '    /book/vistorbooksearch': 'BookController.vistorbooksearch',

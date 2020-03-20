@@ -114,6 +114,11 @@ module.exports = {
         return res.view('game/vistorgamedetail', { game: model });
 
     },
+
+    admingameedit: async function (req, res) {
+        var models = await Game.find().sort([{id:'DESC'}]);
+        return res.view('game/admingameedit', { game: models});
+    },
   
 
 };
