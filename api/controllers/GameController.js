@@ -119,6 +119,37 @@ module.exports = {
         var models = await Game.find().sort([{id:'DESC'}]);
         return res.view('game/admingameedit', { game: models});
     },
+
+     // action - adminupdate
+     admingameupdate: async function (req, res) {
+
+        if (req.method == "GET") {
+
+            var model = await Game.findOne(req.params.id);
+
+            if (!model) return res.notFound();
+
+            return res.view('game/admingameupdate', { game: model });
+
+        } else {
+
+            if (!req.body.Game)
+                return res.badRequest("Form-data not received.");
+
+            var models = await Game.update(req.params.id).set({
+                gamename: req.body.Game.bookname,
+                category: req.body.Game.category,
+                location: req.body.Game.location,
+                photo: req.body.Game.photo,
+                publisher: req.body.Game.publisher,
+                serialno: req.body.Game.serialno,
+            }).fetch();
+            if (models.length == 0) return res.notFound();
+
+            return res.redirect("/game/admingameedit");
+
+        }
+    },
   
 
 };

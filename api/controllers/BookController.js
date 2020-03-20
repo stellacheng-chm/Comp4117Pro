@@ -154,7 +154,7 @@ module.exports = {
             }).fetch();
             if (models.length == 0) return res.notFound();
 
-            return res.ok("Record updated");
+            return res.redirect("/book/adminbookedit");
 
         }
     },
