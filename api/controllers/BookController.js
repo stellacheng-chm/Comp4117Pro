@@ -159,6 +159,19 @@ module.exports = {
         }
     },
 
+    // action - delete 
+    adminbookdelete: async function (req, res) {
+
+        if (req.method == "GET") return res.forbidden();
+
+        var models = await Book.destroy(req.params.id).fetch();
+
+        if (models.length == 0) return res.notFound();
+
+        return res.redirect("/book/adminbookedit");
+
+    },
+
     
   
 

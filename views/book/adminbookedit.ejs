@@ -25,8 +25,10 @@
                     <td>
                         <span id="deleteid"><%= model.id %></span>
 
-                        <button class="'btn btn-danger" type="button" onclick="deleteBook('<%=model.id%>')">
-                            Delete</button>
+                        <form action="/book/adminbookdelete/<%=model.id%>"  method="POST">
+                            <button type="submit" class="btn btn-danger">
+                                刪除</button>
+                        </form>
 
                     </td>
 
