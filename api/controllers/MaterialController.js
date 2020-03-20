@@ -117,7 +117,7 @@ module.exports = {
 
         } else {
 
-            if (!req.body.Gift)
+            if (!req.body.Material)
                 return res.badRequest("Form-data not received.");
 
             var models = await Material.update(req.params.id).set({
@@ -125,8 +125,6 @@ module.exports = {
                 category: req.body.Material.category,
                 location: req.body.Material.location,
                 photo: req.body.Material.photo,
-                donator: req.body.Material.donator,
-                value: req.body.Material.value,
                 amount: req.body.Material.amount,
             }).fetch();
             if (models.length == 0) return res.notFound();
