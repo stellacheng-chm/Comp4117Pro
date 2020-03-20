@@ -126,6 +126,39 @@ module.exports = {
         return res.view('book/adminbookedit', { book: models});
     },
 
+     // action - adminupdate
+     adminbookupdate: async function (req, res) {
+
+        if (req.method == "GET") {
+
+            var model = await Book.findOne(req.params.id);
+
+            if (!model) return res.notFound();
+
+            return res.view('book/adminbookupdate', { book: model });
+
+        } else {
+
+            if (!req.body.Book)
+                return res.badRequest("Form-data not received.");
+
+            var models = await Book.update(req.params.id).set({
+                bookname: req.body.Book.bookname,
+                author: req.body.Book.author,
+                category: req.body.Book.category,
+                location: req.body.Book.location,
+                photo: req.body.Book.photo,
+                year: req.body.Book.year,
+                publisher: req.body.Book.publisher,
+                ISBN: req.body.Book.ISBN,
+            }).fetch();
+            if (models.length == 0) return res.notFound();
+
+            return res.ok("Record updated");
+
+        }
+    },
+
     
   
 

@@ -74,6 +74,8 @@ module.exports.routes = {
   'GET /book/adminbookresult': 'BookController.adminbookresult',
   '   /book/adminbookdetail/:id': 'BookController.adminbookdetail',
   '   /book/adminbookedit': 'BookController.adminbookedit',
+  'GET /book/adminbookupdate/:id': 'BookController.adminbookupdate',
+  'POST /book/adminbookupdate/:id': 'BookController.adminbookupdate',
 
   //AdminGamepage
   '   /game/admingamesearch': 'GameController.admingamesearch',

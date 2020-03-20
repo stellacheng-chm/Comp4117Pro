@@ -133,7 +133,7 @@ module.exports = {
         if (!req.body.User)
             return res.badRequest("Form-data not received.");
 
-        const hash = await sails.bcrypt.hash(req.body.password, 10);
+        const hash=await sails.bcrypt.hash(req.body.password, 10);
 
         await User.create([{username:req.body.username,password:hash,role:"user"}]);
 
