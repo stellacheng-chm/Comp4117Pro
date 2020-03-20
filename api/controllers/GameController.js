@@ -150,6 +150,19 @@ module.exports = {
 
         }
     },
+
+    // action - delete 
+    admingamedelete: async function (req, res) {
+
+        if (req.method == "GET") return res.forbidden();
+
+        var models = await Game.destroy(req.params.id).fetch();
+
+        if (models.length == 0) return res.notFound();
+
+        return res.redirect("/game/admingameedit");
+
+    },
   
 
 };
