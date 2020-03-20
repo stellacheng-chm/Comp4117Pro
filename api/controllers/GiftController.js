@@ -185,8 +185,9 @@ module.exports = {
                 category: req.body.Gift.category,
                 location: req.body.Gift.location,
                 photo: req.body.Gift.photo,
-                publisher: req.body.Gift.publisher,
-                serialno: req.body.Gift.serialno,
+                donator: req.body.Gift.donator,
+                value: req.body.Gift.value,
+                amount: req.body.Gift.amount,
             }).fetch();
             if (models.length == 0) return res.notFound();
 
