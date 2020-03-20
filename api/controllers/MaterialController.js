@@ -135,7 +135,7 @@ module.exports = {
     },
 
     // action - delete 
-    admingiftdelete: async function (req, res) {
+    adminmaterialdelete: async function (req, res) {
 
         if (req.method == "GET") return res.forbidden();
 
