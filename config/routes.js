@@ -102,10 +102,10 @@ module.exports.routes = {
   '   /material/adminmaterialsearch': 'MaterialController.adminmaterialsearch',
   'GET /material/adminmamterialresult': 'MaterialController.adminmaterialresult',
   '   /material/adminmaterialdetail/:id': 'MaterialController.adminmaterialdetail',
-  '   /game/admingameedit': 'GameController.admingameedit',
-  'GET /book/adminbookupdate/:id': 'BookController.adminbookupdate',
-  'POST /book/adminbookupdate/:id': 'BookController.adminbookupdate',
-  'POST /book/adminbookdelete/:id': 'BookController.adminbookdelete',
+  '   /material/admingameedit': 'MaterialController.admingameedit',
+  'GET /material/adminmaterialupdate/:id': 'MaterialController.adminmaterialupdate',
+  'POST /material/adminmaterialupdate/:id': 'MaterialController.adminmaterialupdate',
+  'POST /material/adminmaterialdelete/:id': 'MaterialController.adminmaterialdelete',
 
   //VistorBookpage
   '    /book/vistorbooksearch': 'BookController.vistorbooksearch',
