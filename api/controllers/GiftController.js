@@ -159,6 +159,55 @@ module.exports = {
 
     },
 
+    admingiftedit: async function (req, res) {
+        var models = await Gift.find().sort([{id:'DESC'}]);
+        return res.view('gift/admingiftedit', { gift: models});
+    },
+
+     // action - adminupdate
+     admingiftupdate: async function (req, res) {
+
+        if (req.method == "GET") {
+
+            var model = await Gift.findOne(req.params.id);
+
+            if (!model) return res.notFound();
+
+            return res.view('gift/admingiftupdate', { gift: model });
+
+        } else {
+
+            if (!req.body.Gift)
+                return res.badRequest("Form-data not received.");
+
+            var models = await Gift.update(req.params.id).set({
+                giftname: req.body.Gift.giftname,
+                category: req.body.Gift.category,
+                location: req.body.Gift.location,
+                photo: req.body.Gift.photo,
+                publisher: req.body.Gift.publisher,
+                serialno: req.body.Gift.serialno,
+            }).fetch();
+            if (models.length == 0) return res.notFound();
+
+            return res.redirect("/gift/admingiftedit");
+
+        }
+    },
+
+    // action - delete 
+    admingiftdelete: async function (req, res) {
+
+        if (req.method == "GET") return res.forbidden();
+
+        var models = await Gift.destroy(req.params.id).fetch();
+
+        if (models.length == 0) return res.notFound();
+
+        return res.redirect("/gift/admingiftedit");
+
+    },
+
 
 
 
