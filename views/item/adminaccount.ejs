@@ -6,9 +6,15 @@
 
         <br>
         <br>
-
+        <h2 class="center">用戶資料</h2>
         <div style="position: relative;" class="form-group col-12 col-xl-12">
             <label style="position: relative;bottom: -5px;">用戶名稱: <%=req.session.username%></label>
+            <br>
+            <label style="position: relative;bottom: -5px;">電郵: <%=model.email%></label>
+            <br>
+            <label style="position: relative;bottom: -5px;">部門: <%=model.department%></label>
+            <br>
+            <label style="position: relative;bottom: -5px;">職位: <%=model.position%></label>
         </div>
 
         <div>

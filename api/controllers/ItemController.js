@@ -58,9 +58,9 @@ module.exports = {
     },
 
     adminaccount: async function (req, res) {
-
-
-        return res.view('item/adminaccount');
+        var username=req.session.username
+        var user=await User.findOne({username:username});
+        return res.view('item/adminaccount',{model:user});
     },
 
     adminadditem: async function (req, res) {
