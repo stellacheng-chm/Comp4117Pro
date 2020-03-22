@@ -126,12 +126,12 @@ module.exports.bootstrap = async function () {
   }
 
   await User.createEach([
-    { username: "admin", password: hash, role: "admin" },
-    { username: "oscar", password: hash, role: "user" },
-    { username: "stella", password: hash, role: "user" },
-    { username: "jay", password: hash, role: "user" },
-    { username: "fung", password: hash, role: "user" },
-    { username: "jeremy", password: hash, role: "user" },
+    { username: "admin", password: hash, role: "admin", email:"admin@gmail.com", department:"部門A", position:"職位A" },
+    { username: "oscar", password: hash, role: "user", email:"oscar@gmail.com", department:"部門B", position:"職位B"  },
+    { username: "stella", password: hash, role: "user",email:"stella@gmail.com", department:"部門B", position:"職位B"  },
+    { username: "jay", password: hash, role: "user",email:"jay@gmail.com", department:"部門C", position:"職位C"  },
+    { username: "fung", password: hash, role: "user",email:"fung@gmail.com", department:"部門C", position:"職位C"  },
+    { username: "jeremy", password: hash, role: "user",email:"jeremy@gmail.com", department:"部門C", position:"職位C"  },
     // etc.
   ]);
 

@@ -31,6 +31,18 @@ module.exports = {
       type: "string"
     },
 
+    email: {
+      type: "string"
+    },
+
+    department:{
+      type: "string"
+    },
+
+    position:{
+      type:"string"
+    }
+
   },
 
 };

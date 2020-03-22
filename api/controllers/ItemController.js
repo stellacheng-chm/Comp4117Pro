@@ -42,7 +42,9 @@ module.exports = {
     },
 
     useraccount: async function (req, res) {
-        return res.view('item/useraccount');
+        var username=req.session.username
+        var user=await User.findOne({username:username});
+        return res.view('item/useraccount', {model:user});
     },
 
     vistornotlogin: async function (req, res) {
