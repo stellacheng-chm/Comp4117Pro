@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+    
 
     userindex: async function (req, res) {
 
@@ -128,16 +129,21 @@ module.exports = {
     },
 
     adminaddaccount: async function (req, res) {
-
+        
         if (req.method == "GET")
             return res.view('item/adminaddaccount');
 
         if (!req.body.User)
             return res.badRequest("Form-data not received.");
 
-        const hash=await sails.bcrypt.hash(req.body.password, 10);
+        
+        const salt = await sails.bcrypt.genSalt(10);
 
-        await User.create([{username:req.body.username,password:hash,role:"user"}]);
+        const password=await req.body.password;
+
+        const hash=await sails.bcrypt.hash(password, salt);
+
+        await User.create([{username:req.body.username,password:hash,department:req.body.department,position:req.body.position}]);
 
         return res.view('item/adminaddaccount')
     },
