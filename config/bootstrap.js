@@ -121,9 +121,9 @@ module.exports.bootstrap = async function () {
 
   const hash = await sails.bcrypt.hash('123456', saltRounds);
 
-  if (await User.count() > 0) {
-    return;
-  }
+  // if (await User.count() > 0) {
+  //   return;
+  // }
 
   await User.createEach([
     { username: "admin", password: hash, role: "admin", email:"admin@gmail.com", department:"部門A", position:"職位A" },

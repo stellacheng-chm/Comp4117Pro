@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-    
+
 
     userindex: async function (req, res) {
 
@@ -43,9 +43,9 @@ module.exports = {
     },
 
     useraccount: async function (req, res) {
-        var username=req.session.username
-        var user=await User.findOne({username:username});
-        return res.view('item/useraccount', {model:user});
+        var username = req.session.username
+        var user = await User.findOne({ username: username });
+        return res.view('item/useraccount', { model: user });
     },
 
     vistornotlogin: async function (req, res) {
@@ -59,9 +59,9 @@ module.exports = {
     },
 
     adminaccount: async function (req, res) {
-        var username=req.session.username
-        var user=await User.findOne({username:username});
-        return res.view('item/adminaccount',{model:user});
+        var username = req.session.username
+        var user = await User.findOne({ username: username });
+        return res.view('item/adminaccount', { model: user });
     },
 
     adminadditem: async function (req, res) {
@@ -129,21 +129,25 @@ module.exports = {
     },
 
     adminaddaccount: async function (req, res) {
-        
+
         if (req.method == "GET")
             return res.view('item/adminaddaccount');
 
-        if (!req.body.User)
-            return res.badRequest("Form-data not received.");
 
-        
         const salt = await sails.bcrypt.genSalt(10);
 
-        const password=await req.body.password;
+        const password = await req.body.password;
 
-        const hash=await sails.bcrypt.hash(password, salt);
+        const hash = await sails.bcrypt.hash(password, salt);
 
-        await User.create([{username:req.body.username,password:hash,department:req.body.department,position:req.body.position}]);
+        await User.create(
+            {
+                username: req.body.username,
+                password: hash,
+                department: req.body.department,
+                position: req.body.position,
+                email:req.body.email,
+            });
 
         return res.view('item/adminaddaccount')
     },
