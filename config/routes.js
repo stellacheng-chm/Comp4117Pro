@@ -48,6 +48,11 @@ module.exports.routes = {
   '    /item/adminaddgift': 'ItemController.adminaddgift',
   '    /item/adminaddmaterial': 'ItemController.adminaddmaterial',
   '    /item/adminaddaccount': 'ItemController.adminaddaccount',
+  '    /item/adminuseredit': 'ItemController.adminuseredit',
+  'POST /item/adminuserdelete/:id': 'ItemController.adminuserdelete',
+  '   /item/adminuserdetail/:id': 'ItemController.adminuserdetail',
+  'POST /item/adminuserupdate/:id': 'ItemController.adminuserupdate',
+  'GET /item/adminuserupdate/:id': 'ItemController.adminuserupdate',
 
   //UserBookpage
   '   /book/userbooksearch': 'BookController.userbooksearch',
