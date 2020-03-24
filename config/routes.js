@@ -31,6 +31,8 @@ module.exports.routes = {
   '    /item/usernoti': 'ItemController.usernoti',
   '    /item/useraccount': 'ItemController.useraccount',
   '    /item/usersearch': 'ItemController.usersearch',
+  'POST /item/useraccountupdate/:id': 'ItemController.useraccountupdate',
+  'GET /item/useraccountupdate/:id': 'ItemController.useraccountupdate',
 
   //Vistormainpage
   '    /item/vistorsearch': 'ItemController.vistorsearch',
@@ -53,6 +55,8 @@ module.exports.routes = {
   '   /item/adminuserdetail/:id': 'ItemController.adminuserdetail',
   'POST /item/adminuserupdate/:id': 'ItemController.adminuserupdate',
   'GET /item/adminuserupdate/:id': 'ItemController.adminuserupdate',
+  'POST /item/adminaccountupdate/:id': 'ItemController.adminaccountupdate',
+  'GET /item/adminaccountupdate/:id': 'ItemController.adminaccountupdate',
 
   //UserBookpage
   '   /book/userbooksearch': 'BookController.userbooksearch',

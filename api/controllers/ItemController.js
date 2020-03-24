@@ -180,7 +180,7 @@ module.exports = {
 
     },
 
-    // action - adminupdate
+   
     adminuserupdate: async function (req, res) {
 
         if (req.method == "GET") {
@@ -210,6 +210,74 @@ module.exports = {
             if (models.length == 0) return res.notFound();
 
             return res.redirect("/item/adminuseredit");
+
+        }
+    },
+
+    
+    adminaccountupdate: async function (req, res) {
+
+        if (req.method == "GET") {
+
+            var model = await User.findOne({username:req.session.username});
+
+            if (!model) return res.notFound();
+
+            return res.view('item/adminaccountupdate', { user: model });
+
+        } else {
+
+            
+            const salt = await sails.bcrypt.genSalt(10);
+
+            const password = await req.body.password;
+
+            const hash = await sails.bcrypt.hash(password, salt);
+
+            var models = await User.update(req.params.id).set({
+                username: req.body.username,
+                password: hash,
+                email: req.body.email,
+                department: req.body.department,
+                position: req.body.position,
+            }).fetch();
+            if (models.length == 0) return res.notFound();
+
+            return res.redirect("/item/adminaccount");
+
+        }
+    },
+
+    
+    useraccountupdate: async function (req, res) {
+
+        if (req.method == "GET") {
+
+            var model = await User.findOne({username:req.session.username});
+
+            if (!model) return res.notFound();
+
+            return res.view('item/useraccountupdate', { user: model });
+
+        } else {
+
+            
+            const salt = await sails.bcrypt.genSalt(10);
+
+            const password = await req.body.password;
+
+            const hash = await sails.bcrypt.hash(password, salt);
+
+            var models = await User.update(req.params.id).set({
+                username: req.body.username,
+                password: hash,
+                email: req.body.email,
+                department: req.body.department,
+                position: req.body.position,
+            }).fetch();
+            if (models.length == 0) return res.notFound();
+
+            return res.redirect("/item/useraccount");
 
         }
     },

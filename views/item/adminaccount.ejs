@@ -8,7 +8,7 @@
         <br>
         <h2 class="center">用戶資料</h2>
         <div style="position: relative;" class="form-group col-12 col-xl-12">
-            <label style="position: relative;bottom: -5px;">用戶名稱: <%=req.session.username%></label>
+            <label style="position: relative;bottom: -5px;">用戶名稱: <%=model.username%></label>
             <br>
             <label style="position: relative;bottom: -5px;">電郵: <%=model.email%></label>
             <br>
@@ -26,7 +26,7 @@
         <br>
 
         <form action="/item/adminaddaccount">
-            <button type="submit" class="btn btn-danger center">增加用戶</button>
+            <button type="submit" class="btn btn-warning center">增加用戶</button>
         </form>
 
 
@@ -38,11 +38,10 @@
 
         <br>
 
-        <button type="submit" class="btn btn-dark center">更改密碼</button>
 
-        <br>
-
-        <button type="submit" class="btn btn-dark center">更改資料</button>
+        <form action="/item/adminaccountupdate">
+            <button type="submit" class="btn btn-secondary center">更改密碼/資料</button>
+        </form>
 
         <nav class="bottomnav fixed-bottom">
             <a href="/item/adminindex" class="nav__link">
