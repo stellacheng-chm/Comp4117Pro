@@ -1,7 +1,7 @@
 //isUser.js
 module.exports = async function (req, res, proceed) {
 
-    if (req.session.username!="") {
+    if (req.session.username!=""&&req.session.username!="admin") {
         return proceed();   //proceed to the next policy,
     }
     
