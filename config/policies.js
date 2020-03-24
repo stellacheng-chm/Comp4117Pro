@@ -60,13 +60,13 @@ module.exports.policies = {
   {
     usergiftsearch:"isUser",
     usergiftresult:"isUser",
-    usergamedetail:"isUser",
+    usergiftdetail:"isUser",
     admingiftsearch:"isAdmin",
     admingiftresult:"isAdmin",
     admingiftdetail:"isAdmin",
   },
 
-  MaterialContoller:
+  MaterialController:
   {
     usermaterialsearch:"isUser",
     usermaterialresult:"isUser",

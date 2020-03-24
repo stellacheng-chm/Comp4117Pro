@@ -29,14 +29,17 @@ module.exports = {
 
             req.session.userid = user.id;
 
+            req.session.userrole= user.role;
+
             sails.log("[Session] ", req.session);
 
             // return res.ok("Login successfully.");
 
 
-            if (req.session.username == "admin") {
+            if (req.session.userrole == "admin") {
                 return res.redirect("/item/adminindex");
-            }else{
+            }
+            else if(req.session.userrole=="user"){
                 return res.redirect("/item/userindex");
             }
 

@@ -9,6 +9,10 @@
         <h2 class="center">更改帳戶資料</h2>
 
         <form action="/item/useraccountupdate/<%=user.id%>" method="POST">
+            <div class="col-xl-6 col-form-label">
+                <label>用戶名稱:</label>
+                <input type="text" class="form-control" name="username" value="<%=user.username%>" required>
+            </div>
 
             <div class="form-group col-12 col-xl-6">
                 <label>電郵地址:</label>

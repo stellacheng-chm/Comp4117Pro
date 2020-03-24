@@ -43,8 +43,8 @@ module.exports = {
     },
 
     useraccount: async function (req, res) {
-        var username = req.session.username
-        var user = await User.findOne({ username: username });
+        var id = req.session.userid
+        var user = await User.findOne(id);
         return res.view('item/useraccount', { model: user });
     },
 
@@ -59,8 +59,8 @@ module.exports = {
     },
 
     adminaccount: async function (req, res) {
-        var username = req.session.username
-        var user = await User.findOne({ username: username });
+        var id = req.session.userid
+        var user = await User.findOne(id);
         return res.view('item/adminaccount', { model: user });
     },
 
@@ -219,7 +219,7 @@ module.exports = {
 
         if (req.method == "GET") {
 
-            var model = await User.findOne({username:req.session.username});
+            var model = await User.findOne(req.session.userid);
 
             if (!model) return res.notFound();
 
@@ -230,6 +230,7 @@ module.exports = {
             
 
             var models = await User.update(req.params.id).set({
+                username:req.body.username,
                 email: req.body.email,
                 department: req.body.department,
                 position: req.body.position,
@@ -245,7 +246,7 @@ module.exports = {
 
         if (req.method == "GET") {
 
-            var model = await User.findOne({username:req.session.username});
+            var model = await User.findOne(req.session.userid);
 
             if (!model) return res.notFound();
 
@@ -275,7 +276,7 @@ module.exports = {
 
         if (req.method == "GET") {
 
-            var model = await User.findOne({username:req.session.username});
+            var model = await User.findOne(req.session.userid);
 
             if (!model) return res.notFound();
 
@@ -284,6 +285,7 @@ module.exports = {
         } else {
 
             var models = await User.update(req.params.id).set({
+                username:req.body.username,
                 email: req.body.email,
                 department: req.body.department,
                 position: req.body.position,
@@ -299,7 +301,7 @@ module.exports = {
 
         if (req.method == "GET") {
 
-            var model = await User.findOne({username:req.session.username});
+            var model = await User.findOne(req.session.userid);
 
             if (!model) return res.notFound();
 
