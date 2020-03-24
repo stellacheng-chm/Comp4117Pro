@@ -326,6 +326,18 @@ module.exports = {
         }
     },
 
+    noaccount: async function (req, res) {
+
+
+        return res.view('item/noaccount');
+    },
+
+    wrongpassword: async function (req, res) {
+
+
+        return res.view('item/wrongpassword');
+    },
+
 
 
 

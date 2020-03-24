@@ -15,11 +15,16 @@ module.exports = {
 
         var user = await User.findOne({ username: req.body.username });
 
-        if (!user) return res.status(401).send("User not found");
+        if(!user) return res.redirect("/item/noaccount");
+
+        //if (!user) return res.status(401).send("User not found");
 
         const match = await sails.bcrypt.compare(req.body.password, user.password);
 
-        if (!match) return res.status(401).send("Wrong Password");
+        //if (!match) return res.status(401).send("Wrong Password");
+        
+        if(!match) return res.redirect("/item/wrongpassword");
+
 
         req.session.regenerate(function (err) {
 

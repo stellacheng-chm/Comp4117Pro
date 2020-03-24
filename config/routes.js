@@ -35,6 +35,8 @@ module.exports.routes = {
   'GET /item/useraccountupdate/:id': 'ItemController.useraccountupdate',
   'POST /item/userpasswordupdate/:id': 'ItemController.userpasswordupdate',
   'GET /item/userpasswordupdate/:id': 'ItemController.userpasswordupdate',
+  '    /item/noaccount': 'ItemController.noaccount',
+  '    /item/wrongpassword': 'ItemController.wrongpassword',
 
   //Vistormainpage
   '    /item/vistorsearch': 'ItemController.vistorsearch',
